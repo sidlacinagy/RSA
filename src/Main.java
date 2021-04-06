@@ -35,16 +35,16 @@ public class Main {
 
         if(!cryption && generate){
             KeySet keySet=KeyGenerator.Generate();
-            int encrypted1[]=Cryptions.encrypt(messageArray,keySet.getPublicKey());
+            int encrypted1[]=Cryptions.crypt(messageArray,keySet.getPublicKey());
             System.out.println(keySet);
             System.out.println(Arrays.toString(encrypted1));
         }
         if(!cryption && !generate){
-            int encrypted2[]=Cryptions.encrypt(messageArray,key);
+            int encrypted2[]=Cryptions.crypt(messageArray,key);
             System.out.println(Arrays.toString(encrypted2));
         }
         if(cryption){
-            int decrypted[]=Cryptions.decrypt(messageArray,key);
+            int decrypted[]=Cryptions.crypt(messageArray,key);
             System.out.println(Arrays.toString(decrypted));
         }
 
